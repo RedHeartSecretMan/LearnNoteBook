@@ -2,9 +2,11 @@
 
 [toc]
 
+
+
 ## **Git**
 
-**Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比，使用 bash 命令实现版本控制，常用命令是 git clone、git push、git add、git commit、git checkout、git pull 等，通常使用 Github 远端托管，远程仓库地址的默认代称是 origin 本地仓库的默认分支对象是 main 或 master**
+**Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比，使用 bash 命令实现版本控制，常用命令是 git clone、git push、git add、git commit、git checkout、git pull 等，远端托管使用 Github 与 gitee 等，Github 远程仓库地址的默认代称是 origin，Git 初始化本地仓库的默认分支对象名字是 main 或 master**
 
 ```mermaid
 graph LR
@@ -16,15 +18,24 @@ graph LR
     D -.pull.-> A
 ```
 
+**Git 可使用https 协议、ssh 协议 和 git 协议与远端托管建立通信**
+
+- **https 协议的网络地址以 https:// 开头，是 http + ssl 组成的安全网络协议，http 是建立在应用层，ssl 是建立在传输层，首先需要身份授权验证（使用账号和密码）然后进行加密传输数据（账号密码以及数据传输均使用 ssl 加密）**
+- **ssh 协议的网络地址以 ssh:// 开头，是建立在应用层的安全网络协议，不仅可以加密传输数据还可以进行身份授权验证，需要本地存储非对称密钥的私钥，远端托管绑定非对称密钥的公钥**
+
+- **git 协议的网络地址以 git:// 开头，数据传输与 ssh 类似，但不需要身份验证**
+
+  > **git@ 实际上是使用 ssh 协议。它相当于 ssh://git@**
+
 
 
 ## **工作流**
 
-**1.  创建 Ssh Key 作为 Github 与本地通信的密钥（Gpg Key 类似）**
+**1.  创建 Ssh Key 作为本地与 Github 通信的密钥（Gpg Key 类似）**
 
 - **终端执行 `ssh-keygen -t rsa -f <生成路径> -C <Github 邮箱地址>` 在指定位置生成 .ssh 文件夹，其中包含 id_rsa 私钥与 id_rsa.pub 公钥，在自己 Github 账户里的设置的 Ssh Key 中输入 id_rsa.pub 公钥的内容绑定，如果本地的 id_rsa 私钥的路径不在系统环境变量中则终端执行 `git config --global core.sshCommand "ssh -i <私钥文件路径>"`（默认当前工作区有效设置`--global` 则表示全局有效）**
 - **终端执行 `ssh -T git@github.com` 可以验证是否绑定成功，返回 `Hi <Github 账户名字> ! You've successfully authenticated, but GitHub does not provide shell access.` 表示成功**
-- **终端执行 `git config --global user.name <你的名字>` 与 `git config --global user.email <你的邮箱地址>` 配置 Git 用户的名字与邮箱地址，终端执行 `git config -l` 或  `git config --list` 查看 Git 配置信息**
+- **终端执行 `git config --global user.name <你的名字>` 与 `git config --global user.email <你的邮箱地址>` 配置 Git 用户的名字与邮箱地址用于提交时的信息记录，终端执行 `git config -l` 或  `git config --list` 查看 Git 配置信息**
 
 
 
@@ -32,7 +43,7 @@ graph LR
 
 - **在本地项目文件的根目录启动终端或直接启动终端执行 `cd <本地项目文件路径>`**
 - **终端执行 `git init` 生成一个 .git 文件夹（实现了本地仓库与暂存区等概念以及保存各分支对象的快照），本地项目文件通过分支对象映射为工作区，初始化后本地仓库的分支对象名字是空的 '‘main’'，终端执行 `git branch -m main`（`-m` 表示将第一个参数重命名为第二个参数）将本地仓库的分支对象由空的 '‘main’' 命名为 main**
-- **在 Github 新建一个空的新仓库，其默认分支对象名为 main，终端输入 `git remote add origin git@github.com:<Github 账户名字>/<仓库名字>.git` 设置远程仓库地址并代称 origin（也可以设置远程仓库地址为 `https://github.com/<Github 账户名字>/<仓库名字>.git` 使用 Ssl 加密协议）如果远程仓库地址没有设置 Ssh Key 则需要口令认证（输入账号密码） **
+- **在 Github 新建一个空的新仓库，其默认分支对象名为 main，终端输入 `git remote add origin git@github.com:<Github 账户名字>/<仓库名字>.git` 设置远程仓库地址并代称 origin **
 - **在工作区创建一个 README.md 文件，终端执行 `echo "# <本地项目文件路径>" >> README.md` 或手动在工作区创建一个 README.md 文件**
 - **终端执行 `git add README.md` 或 `git add *或.`（`*或.` 表示当前工作区中的全部文件）将工作区的 README.md 文件添加到暂存区，终端执行 `git commit -m <注释信息>` （`-m` 表示提供注释信息）将暂存区新增文件提交给本地仓库并提供注释信息**
 
@@ -106,17 +117,21 @@ graph LR
 
 - **回退版本**
 
-  >  ***git reset <--mixed | --hard> HEAD 其中 --mixed 是默认参数，重置暂存区与上一次的提交保持一致，工作区保持不变***
+  >  ***git reset <--mixed | --hard> HEAD （HEAD 是当前提交的指针）其中 --mixed 是默认参数，重置暂存区与上一次的提交保持一致，工作区保持不变***
   >
-  > ***git reset --hard HEAD~3 回退上上上一个版本（HEAD 是版本标识）使用 --hard 参数会撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到指令版本，并删除之前的所有信息提交***  
+  > ***git reset --hard HEAD~3 回退上上上一个版本（HEAD~3 是当前提交的上 3 次提交）使用 --hard 参数会撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到指令版本，并删除之前的所有信息提交***  
   >
   > ***git reset --hard origin/main 将本地的状态回退到和远程的一样***
 
+- **合并分支对象**
+
+  > ***git merge <目标分支对象名字> 直接把目标分支对象合并到当前分支对象中*** 
+  
 - **变基整合分支对象**
 
   > ***git rebase <目标基底分支对象名字>***
   >
-  > ***原理是找到当前分支对象与变基操作的目标基底分支对象的最近共同祖先分支对象的快照，然后对比当前分支相对于该祖先分支对象的历次提交，提取相应的修改并存为临时文件，然后将当前分支指向目标基底分支对象, 最后对其应用之前另存为临时文件的修改，rebase 相较于 merge 会在合并分支对象的基础上优化整个分支对象的历史，使其变得像一条直线***
+  > ***原理是找到当前分支对象与变基操作的目标基底分支对象的最近共同祖先分支对象的快照，然后对比当前分支相对于该祖先分支对象的历次提交，提取相应的修改并存为临时文件，然后将当前分支指向目标基底分支对象, 最后对其应用之前另存为临时文件的修改，rebase 相较于 merge 会在合并分支对象的基础上优化整个分支对象的历史，使其变得像一条直线，同时也会导致快照的顺序与真实提交时间的差异***
 
 
 
