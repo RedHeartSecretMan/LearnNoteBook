@@ -494,6 +494,7 @@ section 具体内容
 |                         [ 和 ]                         |                          `[ `和 `]`                          |
 |                        \| 或 ｜                        |                         `|` 或 `｜`                          |
 |                 $\lfloor$ 和 $\rfloor$                 |                 `$\lfloor$` 和 `$\rfloor$ `                  |
+|                  $\lceil$ 和 $\rceil$                  |                   `$\lceil$` 和 `$\rceil$`                   |
 
 
 

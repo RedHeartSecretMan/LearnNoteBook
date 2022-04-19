@@ -43,7 +43,7 @@ graph LR
 
 - **在本地项目文件的根目录启动终端或直接启动终端执行 `cd <本地项目文件路径>`**
 - **终端执行 `git init` 生成一个 .git 文件夹（实现了本地仓库与暂存区等概念以及保存各分支对象的快照），本地项目文件通过分支对象映射为工作区，初始化后本地仓库的分支对象名字是空的 '‘main’'，终端执行 `git branch -m main`（`-m` 表示将第一个参数重命名为第二个参数）将本地仓库的分支对象由空的 '‘main’' 命名为 main**
-- **在 Github 新建一个空的新仓库，其默认分支对象名为 main，终端输入 `git remote add origin git@github.com:<Github 账户名字>/<仓库名字>.git` 设置远程仓库地址并代称 origin **
+- **在 Github 新建一个空的新仓库，其默认分支对象名为 main，终端输入 `git remote add origin git@github.com:<Github 账户名字>/<仓库名字>.git` 设置远程仓库地址并代称 origin**
 - **在工作区创建一个 README.md 文件，终端执行 `echo "# <本地项目文件路径>" >> README.md` 或手动在工作区创建一个 README.md 文件**
 - **终端执行 `git add README.md` 或 `git add *或.`（`*或.` 表示当前工作区中的全部文件）将工作区的 README.md 文件添加到暂存区，终端执行 `git commit -m <注释信息>` （`-m` 表示提供注释信息）将暂存区新增文件提交给本地仓库并提供注释信息**
 
