@@ -3,12 +3,12 @@
 ## **Zernike表达式**
 
 $$
-Z_n^m(\rho,\theta)=N_n^mR_n^m(\rho)\Theta_m(\theta)\\
+\varphi^k(x,y)=Z_n^m(\rho,\theta)=N_n^mR_n^m(\rho)\Theta_m(\theta)\\
 \\
 \pmb{其中}
 \begin{cases}
-\rho \in (0,\quad 1)\\
-\theta \in (0,\quad 2\pi)\\
+\rho=\sqrt{x^2+y^2} \;\in (0,\quad 1)\\
+\theta=arctan(\frac{y}{x}) \in (0,\quad 2\pi)\\
 |Z^{m}_n(\rho,\theta)| \le 1
 \end{cases}
 $$
@@ -16,8 +16,12 @@ $$
 - **标准化系数**
 
 $$
-N_n^m=\sqrt{\frac{2(1+n)}{\pi(1+\sigma)}}
-\quad \pmb{and}\quad \sigma=
+N_n^m=
+\begin{cases}\sqrt{\frac{2(1+n)}{1+\sigma}}\Rightarrow N_n^m(\pi)\\
+\sqrt{\frac{2(1+n)}{\pi(1+\sigma)}}\Rightarrow N_n^m(1)
+\end{cases}
+\quad \pmb{and}\quad 
+\sigma=
 \begin{cases}1,&m = 0\\
 0,&m\not=0 
 \end{cases}
@@ -28,8 +32,11 @@ $$
 $$
 R_n^m(\rho)=\sum_{k=0}^{\tfrac{n-m}{2}}{\frac{(-1)^k(n-k)!}{k!(\frac{n+m}{2}-k)!(\frac{n-m}{2}-k)!}}\rho^{n-2k}\\
 \pmb{or}\\
-R_n^m(\rho)=\sum_{k=0}^{\tfrac{n-m}{2}}(-1)^k \binom{n-k}{k} \binom{n-2k}{\tfrac{n-m}{2}-k} \rho^{n-2k}
+R_n^m(\rho)=\sum_{k=0}^{\tfrac{n-m}{2}}(-1)^k \binom{n-k}{k} \binom{n-2k}{\tfrac{n-m}{2}-k} \rho^{n-2k}\\\\
+k={\frac {n(n+1)}{2}}+|m|+\left\{{\begin{array}{ll}0,&m>0\land n\equiv \{0,1\}{\pmod {4}}\\0,&m<0\land n\equiv \{2,3\}{\pmod {4}}\\1,&m\geq 0\land n\equiv \{2,3\}{\pmod {4}}\\1,&m\leq 0\land n\equiv \{0,1\}{\pmod {4}}\end{array}}\right.\\\\
 $$
+
+
 
 - **弧度表达式**
 
@@ -44,7 +51,11 @@ $$
 ## ***Zernike*** **多项式的积分**
 
 $$
-\int_0^{2\pi} \int_0^1 Z^2\cdot\rho\,d\rho\,d\theta = 1
+N_n^m(\pi)\Rightarrow
+\begin{cases}
+\int_{0}^{2\pi }\int_{0}^{1}Z_n^m(\rho,\theta)^{2}\cdot \rho \,d\rho \,d\theta =\pi\\
+{Var} (Z_n^m(\rho,\theta))_{\text{unit circle}}=1
+\end{cases}
 $$
 
 ## ***Zernike*** **多项式的图像应用**

@@ -1,4 +1,4 @@
-# ***Markdown*** **语法**
+# ***Markdown*** **技术**
 
 [toc]
 
@@ -159,7 +159,7 @@
 
 ### **顺序图**
 
-#### **标准顺序图 *sequence***
+#### **标准顺序图 sequence**
 
 - **基本语法**
 
@@ -191,7 +191,7 @@ Note right of 胡敏: 胡敏稍作思考
 
 
 
-#### **样式顺序图 *mermaid* 的 *sequenceDiagram***
+#### **样式顺序图 mermaid 的 sequenceDiagram**
 
 - **基本语法同标准时序图，线条样式不同**
 
@@ -233,7 +233,7 @@ Note over 哆哆和卷心菜: 想吃就吃
 
 ### **流程图**
 
-#### **标准流程图 *flowchart***
+#### **标准流程图 flowchart**
 
 - **定义模块**
 
@@ -279,7 +279,7 @@ cond(yes)->e
 
 
 
-#### **样式流程图 *mermaid* 的 *gragh***
+#### **样式流程图 mermaid 的 gragh**
 
 - **图的方向定义**
 
@@ -317,7 +317,7 @@ graph LR
 
 
 
-### **甘特图 *gantt***
+### **甘特图 gantt**
 
 **使用 *mermaid* 的 *gantt* 关键字**
 
@@ -379,13 +379,13 @@ section 具体内容
 
 
 
-## ***YAML Front Matter***
+## **YAML Front Matter**
 
 **在文档顶端输入 `---` 回车将会插入一个元数据块用于定义文档的全局变量例如图床地址等** 
 
 
 
-## ***LaTex***
+## **LaTex**
 
 **使用 `$ $ ` 或 `$$ $$` 包裹七类符号，分别是「Ord」普通符号，拉丁字母等；「Op」计算符号，求和积分等；「Bin」二元运算符号，加减乘除、交集和并集等；「Rel」二元关系符号，等于、约等于和大于小于等；「Open」左括号与「Close」右括号以及「Punct」标点符号，不同类别符号组合会呈现不同疏密程度的间距并且随着场景不同而相应变化，默认字体 Cambria Math，默认字号正文 10 磅、一级上下标 7 磅和二级及以上上下标 5 磅**
 
@@ -432,35 +432,12 @@ section 具体内容
 |                        $\mathcal{N}$                         |                       `$\mathcal{N}$`                        |  数学花体  |
 |                     $\text{e.g.  text}$                      |                    `$\text{e.g.  text}$`                     | 纯文本注释 |
 | $\tiny text$<br/>$\scriptsize text$<br/>$\small text$<br/>$\normalsize text$<br/>$\large text$<br/>$\Large text$<br/>$\LARGE text$<br/>$\huge text$<br/>$\Huge text$ | `$\tiny text$`<br/>`$\scriptsize text$`<br/>`$\small text$`<br/>`$\normalsize text$`<br/>`$\large text$`<br/>`$\Large text$`<br/>`$\LARGE text$`<br/>`$\huge text$`<br/>`$\Huge text$` |  字体大小  |
+|             $\pmb{text}$ 和 $\boldsymbol{text}$              |           `$\pmb{text}$` 和 `$\boldsymbol{text}$`            |  字体加粗  |
 |         $\color{red}{text}$ 和 $\color{#f00}{text}$          |       `$\color{red}{text}$` 和 `$\color{#f00}{text}$`        |  字体颜色  |
 
 
 
-### **字符**
-
-|    符号     |    源代码     |   符号    |   源代码    |    符号     |    源代码     |     符号     |     源代码     |
-| :---------: | :-----------: | :-------: | :---------: | :---------: | :-----------: | :----------: | :------------: |
-|  $\alpha$   |  `$\alphaα$`  |    $A$    |    `$A$`    |   $\beta$   |   `$\beta$`   |     $B$      |     `$B$`      |
-|  $\gamma$   |  `$\gamma$`   | $\Gamma$  | `$\Gamma$`  |  $\delta$   |  `$\delta$`   |   $\Delta$   |   `$\Delta$`   |
-| $\epsilon$  | `$\epsilon$`  |    $E$    |    `$E$`    |   $\zeta$   |     `$Z$`     |     $Z$      |     `$Z$`      |
-|   $\eta$    |   `$\eta$`    |    $H$    |    `$H$`    |  $\theta$   |  `$\theta$`   |   $\Theta$   |   `$\Theta$`   |
-|   $\iota$   |   `$\iota$`   |    $I$    |    `$I$`    |  $\kappa$   |  `$\kappa$`   |     $K$      |     `$K$`      |
-|  $\lambda$  |  `$\lambda$`  | $\Lambda$ | `$\Lambda$` |    $\nu$    |    `$\nu$`    |     $N$      |     `$N$`      |
-|    $\mu$    |    `$\mu$`    |    $M$    |    `$M$`    |    $\xi$    |    `$\xi$`    |    $\Xi$     |    `$\Xi$`     |
-|     $o$     |     `$o$`     |    $O$    |    `$O$`    |    $\pi$    |    `$\pi$`    |    $\Pi$     |    `$\Pi$`     |
-|   $\rho$    |   `$\rho$`    |    $P$    |    `$P$`    |  $\sigma$   |  `$\sigma$`   |   $\Sigma$   |   `$\Sigma$`   |
-|   $\tau$    |   `$\tau$`    |    $T$    |    `$T$`    | $\upsilon$  | `$\upsilon$`  |  $\Upsilon$  |  `$\Upsilon$`  |
-|   $\phi$    |   `$\phi$`    |  $\phi$   |  `$\phi$`   |   $\chi$    |   `$\chi$`    |    $\chi$    |    `$\chi$`    |
-|   $\psi$    |   `$\psi$`    |  $\Psi$   |  `$\Psi$`   |  $\omega$   |  `$\omega$`   |   $\Omega$   |   `$\Omega$`   |
-| $\varsigma$ | `$\varsigma$` | $\varphi$ | `$\varphi$` |   $\beth$   |   `$\beth$`   |  $\daleth$   |  `$\daleth$`   |
-|  $\gimel$   |  `$\gimel$`   | $\aleph$  | `$\aleph$`  |  $\nabla$   |  `$\nabla$`   | $\bigoplus$  | `$\bigoplus$`  |
-|   $\sum$    |   `$\sum$`    |  $\prod$  |  `$\prod$`  |  $\times$   |  `$\times$`   |    $\div$    |    `$\div$`    |
-|   $\cdot$   |   `$\cdot$`   |  $\ast$   |  `$\ast$`   | $\bigodot$  | `$\bigodot$`  | $\bigotimes$ | `$\bigotimes$` |
-|   $\mid$    |   `$\mid$`    |  $\nmid$  |  `$\nmid$`  | $\parallel$ | `$\parallel$` | $\nparallel$ | `$\nparallel$` |
-
-
-
-### **空白**
+### **空格**
 
 |       符号       |      源代码      |   描述   |
 | :--------------: | :--------------: | :------: |
@@ -472,7 +449,61 @@ section 具体内容
 
 
 
-### **上下标和括号**
+### **字符**
+
+|    符号     |    源代码     |    符号     |    源代码     |     符号     |     源代码     |      符号      |      源代码      |
+| :---------: | :-----------: | :---------: | :-----------: | :----------: | :------------: | :------------: | :--------------: |
+|  $\alpha$   |  `$\alphaα$`  |     $A$     |     `$A$`     |   $\beta$    |   `$\beta$`    |      $B$       |      `$B$`       |
+|  $\gamma$   |  `$\gamma$`   |  $\Gamma$   |  `$\Gamma$`   |   $\delta$   |   `$\delta$`   |    $\Delta$    |    `$\Delta$`    |
+| $\epsilon$  | `$\epsilon$`  |     $E$     |     `$E$`     |   $\zeta$    |     `$Z$`      |      $Z$       |      `$Z$`       |
+|   $\eta$    |   `$\eta$`    |     $H$     |     `$H$`     |   $\theta$   |   `$\theta$`   |    $\Theta$    |    `$\Theta$`    |
+|   $\iota$   |   `$\iota$`   |     $I$     |     `$I$`     |   $\kappa$   |   `$\kappa$`   |      $K$       |      `$K$`       |
+|  $\lambda$  |  `$\lambda$`  |  $\Lambda$  |  `$\Lambda$`  |    $\nu$     |    `$\nu$`     |      $N$       |      `$N$`       |
+|    $\mu$    |    `$\mu$`    |     $M$     |     `$M$`     |    $\xi$     |    `$\xi$`     |     $\Xi$      |     `$\Xi$`      |
+|     $o$     |     `$o$`     |     $O$     |     `$O$`     |    $\pi$     |    `$\pi$`     |     $\Pi$      |     `$\Pi$`      |
+|   $\rho$    |   `$\rho$`    |     $P$     |     `$P$`     |   $\sigma$   |   `$\sigma$`   |    $\Sigma$    |    `$\Sigma$`    |
+|   $\tau$    |   `$\tau$`    |     $T$     |     `$T$`     |  $\upsilon$  |  `$\upsilon$`  |   $\Upsilon$   |   `$\Upsilon$`   |
+|   $\phi$    |   `$\phi$`    |   $\phi$    |   `$\phi$`    |    $\chi$    |    `$\chi$`    |     $\chi$     |     `$\chi$`     |
+|   $\psi$    |   `$\psi$`    |   $\Psi$    |   `$\Psi$`    |   $\omega$   |   `$\omega$`   |    $\Omega$    |    `$\Omega$`    |
+| $\varsigma$ | `$\varsigma$` |  $\varphi$  |  `$\varphi$`  |   $\beth$    |   `$\beth$`    |   $\daleth$    |   `$\daleth$`    |
+|  $\gimel$   |  `$\gimel$`   |  $\aleph$   |  `$\aleph$`   |    $\mid$    |    `$\mid$`    |  $\parallel$   |  `$\parallel$`   |
+| $\bigodot$  | `$\bigodot$`  | $\bigoplus$ | `$\bigoplus$` | $\bigotimes$ | `$\bigotimes$` | $\imath\jmath$ | `$\imath\jmath$` |
+
+
+
+### **操作符**
+
+|                          符号                          |                            源代码                            |   描述   |
+| :----------------------------------------------------: | :----------------------------------------------------------: | :------: |
+|      $\ln{a+b}$  和 $\lg{a+b}$ 和 $\log_{a}^{b}$       |       `$\ln{a+b}$` 和 `$\lg{a+b}$` 和 `$\log_{a}^{b}$`       |          |
+|           $\leq$ 和 $\geq$ 和 $\ll$ 和 $\gg$           |          `$\leq$` 和 `$\geq$` 和 `$\ll$` 和 `$\gg$`          |          |
+|                         $\pm$                          |                           `$\pm$`                            |          |
+|   $=$ 和 $\approx$ 和 $\cong$ 和 $\equiv$ 和 $\neq$    |  `$=$` 和 `$\approx$` 和 `$\cong$` 和 `$\equiv$`和 `$\neq$`  |          |
+|                 $\propto$ 和 $\infty$                  |                  `$\propto$` 和 `$\infty$`                   |          |
+| $\emptyset$ 和 $\varnothing$ 和 $\subset$ 和 $\supset$ | `$\emptyset$` 和 `$\varnothing$`和 `$\subset$` 和 `$\supset$` |          |
+|               $\in$ 和 $\ni$ 和 $\notin$               |               `$\in$` 和 `$\ni$`和 `$\notin$`                |          |
+|       $\cup$ 和 $\bigcup$ 和 $\cap$ 和 $\bigcap$       |      `$\cup$` 和 `$\bigcup$` 和 `$\cap$` 和 `$\bigcap$`      |          |
+|               $\because$ 和 $\therefore$               |                `$\because$` 和 `$\therefore$`                |          |
+|                 $\forall$ 和 $\exists$                 |                  `$\forall$` 和 `$\exists$`                  |          |
+|                         $\not$                         |                           `$\not$`                           |    非    |
+|                         $\div$                         |                           `$\div$`                           |    除    |
+|                        $\times$                        |                          `$\times$`                          |    乘    |
+|                        $\cdot$                         |                          `$\cdot$`                           |   点乘   |
+|                         $\exp$                         |                           `$\exp$`                           | 自然指数 |
+|                         $\ast$                         |                           `$\ast$`                           |   卷积   |
+|                        $\star$                         |                          `$\star$`                           |  互相关  |
+|                         $\lim$                         |                           `$\lim$`                           |   极限   |
+|                        $\prime$                        |                          `$\prime$`                          |   导数   |
+|                       $\partial$                       |                         `$\partial$`                         |   偏导   |
+|                        $\nabla$                        |                          `$\nabla$`                          |   微分   |
+|                         $\sum$                         |                           `$\sum$`                           |   求和   |
+|             $\int$ 和 $\iint$ 和 $\iiint$              |             `$\int$` 和 `$\iint$` 和 `$\iiint$`              |   积分   |
+|                        $\oint$                         |                          `$\oint$`                           | 曲线积分 |
+|                        $\prod$                         |                          `$\prod$`                           |   连乘   |
+
+
+
+### **上下标与括号**
 
 |                          符号                          |                            源代码                            |
 | :----------------------------------------------------: | :----------------------------------------------------------: |
@@ -498,14 +529,14 @@ section 具体内容
 
 
 
-### **矢量和方向**
+### **矢量与方向**
 
 |                符号                |                 源代码                 | 描述 |
 | :--------------------------------: | :------------------------------------: | :--: |
 |            $\mathbf{x}$            |             `$\mathbf{x}$`             | 矢量 |
 |             $\vec{x}$              |              `$\vec{x}$`               | 矢量 |
 |        $\overleftarrow{x}$         |         `$\overleftarrow{x}$`          |      |
-|        $\overrightarrow{x}$        |         `$\overrightarrow{x}$`         | 向量 |
+|        $\overrightarrow{x}$        |         `$\overrightarrow{x}$`         |      |
 |  $\leftarrow$ 和 $\longleftarrow$  |  `$\leftarrow$` 和 `$\longleftarrow$`  |      |
 | $\rightarrow$ 和 $\longrightarrow$ | `$\rightarrow$` 和 `$\longrightarrow$` |      |
 |             $\uparrow$             |              `$\uparrow$`              |      |
@@ -514,12 +545,12 @@ section 具体内容
 | $\Rightarrow$ 和 $\Longrightarrow$ | `$\Rightarrow$ `和 `$\Longrightarrow$` |      |
 |             $\Uparrow$             |              `$\Uparrow$`              |      |
 |            $\Downarrow$            |             `$\Downarrow$`             |      |
-|               $\bot$               |                `$\bot$`                | 垂直 |
+|               $\bot$               |                `$\bot$`                |      |
 |         $\angle\,45^\circ$         |          `$\angle\,45^\circ$`          |      |
 
 
 
-### **分式和根式**
+### **分式与根式**
 
 |                             符号                             |                            源代码                            |    描述    |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :--------: |
@@ -536,33 +567,7 @@ section 具体内容
 
 
 
-### **操作符**
-
-|                          符号                          |                            源代码                            |    描述    |
-| :----------------------------------------------------: | :----------------------------------------------------------: | :--------: |
-|      $\ln{a+b}$  和 $\lg{a+b}$ 和 $\log_{a}^{b}$       |        `$\ln{a+b}$ 和 `$\lg{a+b}$ 和 `$\log_{a}^{b}$`        |            |
-|           $\leq$ 和 $\geq$ 和 $\ll$ 和 $\gg$           |          `$\leq$` 和 `$\geq$` 和 `$\ll$` 和 `$\gg$`          |            |
-|   $=$ 和 $\approx$ 和 $\cong$ 和 $\equiv$ 和 $\neq$    |  `$=$` 和 `$\approx$` 和 `$\cong$` 和 `$\equiv$`和 `$\neq$`  |            |
-|                 $\propto$ 和 $\infty$                  |                  `$\propto$` 和 `$\infty$`                   | 正比和无穷 |
-| $\emptyset$ 和 $\varnothing$ 和 $\subset$ 和 $\supset$ | `$\emptyset$` 和 `$\varnothing$`和 `$\subset$` 和 `$\supset$` |            |
-|               $\in$ 和 $\ni$ 和 $\notin$               |               `$\in$` 和 `$\ni$`和 `$\notin$`                |            |
-|       $\cup$ 和 $\bigcup$ 和 $\cap$ 和 $\bigcap$       |      `$\cup$` 和 `$\bigcup$` 和 `$\cap$` 和 `$\bigcap$`      |            |
-|               $\because$ 和 $\therefore$               |                `$\because$` 和 `$\therefore$`                |            |
-|                 $\forall$ 和 $\exists$                 |                  `$\forall$` 和 `$\exists$`                  |            |
-|                         $\pm$                          |                           `$\pm$`                            |            |
-|                         $\not$                         |                           `$\not$`                           |     非     |
-|                 $\imath$  和 $\jmath$                  |                  `$\imath$`  和 `$\jmath$`                   |    虚数    |
-|                         $\exp$                         |                           `$\exp$`                           |  自然指数  |
-|                         $\lim$                         |                           `$\lim$`                           |    极限    |
-|                        $\star$                         |                          `$\star$`                           |   互相关   |
-|                        $\prime$                        |                          `$\prime$`                          |    导数    |
-|                       $\partial$                       |                         `$\partial$`                         |    偏导    |
-|             $\int$ 和 $\iint$ 和 $\iiint$              |             `$\int$` 和 `$\iint$` 和 `$\iiint$`              |    积分    |
-|                        $\oint$                         |                          `$\oint$`                           |  曲线积分  |
-
-
-
-### **公式**
+### **表达式**
 
 - **符号**
 
@@ -792,3 +797,12 @@ section 具体内容
   > *cases* 环境	构造多分支公式
   > *array* 环境	构造数组其中 *{lcr}* 描述列对齐方式 *l* 左对齐 *c* 中对齐 *r* 右对齐 可嵌入其他环境 可构造方程
   > *matrix* 环境	构造矩阵其中不同括号 *pmatrix bmatrix Bmatrix vmatrix Vmatrix* 
+
+
+
+
+
+
+
+
+
