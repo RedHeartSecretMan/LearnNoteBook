@@ -451,23 +451,23 @@ section 具体内容
 
 ### **字符**
 
-|    符号     |    源代码     |    符号     |    源代码     |     符号     |     源代码     |      符号      |      源代码      |
-| :---------: | :-----------: | :---------: | :-----------: | :----------: | :------------: | :------------: | :--------------: |
-|  $\alpha$   |  `$\alphaα$`  |     $A$     |     `$A$`     |   $\beta$    |   `$\beta$`    |      $B$       |      `$B$`       |
-|  $\gamma$   |  `$\gamma$`   |  $\Gamma$   |  `$\Gamma$`   |   $\delta$   |   `$\delta$`   |    $\Delta$    |    `$\Delta$`    |
-| $\epsilon$  | `$\epsilon$`  |     $E$     |     `$E$`     |   $\zeta$    |     `$Z$`      |      $Z$       |      `$Z$`       |
-|   $\eta$    |   `$\eta$`    |     $H$     |     `$H$`     |   $\theta$   |   `$\theta$`   |    $\Theta$    |    `$\Theta$`    |
-|   $\iota$   |   `$\iota$`   |     $I$     |     `$I$`     |   $\kappa$   |   `$\kappa$`   |      $K$       |      `$K$`       |
-|  $\lambda$  |  `$\lambda$`  |  $\Lambda$  |  `$\Lambda$`  |    $\nu$     |    `$\nu$`     |      $N$       |      `$N$`       |
-|    $\mu$    |    `$\mu$`    |     $M$     |     `$M$`     |    $\xi$     |    `$\xi$`     |     $\Xi$      |     `$\Xi$`      |
-|     $o$     |     `$o$`     |     $O$     |     `$O$`     |    $\pi$     |    `$\pi$`     |     $\Pi$      |     `$\Pi$`      |
-|   $\rho$    |   `$\rho$`    |     $P$     |     `$P$`     |   $\sigma$   |   `$\sigma$`   |    $\Sigma$    |    `$\Sigma$`    |
-|   $\tau$    |   `$\tau$`    |     $T$     |     `$T$`     |  $\upsilon$  |  `$\upsilon$`  |   $\Upsilon$   |   `$\Upsilon$`   |
-|   $\phi$    |   `$\phi$`    |   $\phi$    |   `$\phi$`    |    $\chi$    |    `$\chi$`    |     $\chi$     |     `$\chi$`     |
-|   $\psi$    |   `$\psi$`    |   $\Psi$    |   `$\Psi$`    |   $\omega$   |   `$\omega$`   |    $\Omega$    |    `$\Omega$`    |
-| $\varsigma$ | `$\varsigma$` |  $\varphi$  |  `$\varphi$`  |   $\beth$    |   `$\beth$`    |   $\daleth$    |   `$\daleth$`    |
-|  $\gimel$   |  `$\gimel$`   |  $\aleph$   |  `$\aleph$`   |    $\mid$    |    `$\mid$`    |  $\parallel$   |  `$\parallel$`   |
-| $\bigodot$  | `$\bigodot$`  | $\bigoplus$ | `$\bigoplus$` | $\bigotimes$ | `$\bigotimes$` | $\imath\jmath$ | `$\imath\jmath$` |
+|    符号     |    源代码     |    符号     |    源代码     |     符号     |     源代码     |    符号     |    源代码     |
+| :---------: | :-----------: | :---------: | :-----------: | :----------: | :------------: | :---------: | :-----------: |
+|  $\alpha$   |  `$\alpha$`   |     $A$     |     `$A$`     |   $\beta$    |   `$\beta$`    |     $B$     |     `$B$`     |
+|  $\gamma$   |  `$\gamma$`   |  $\Gamma$   |  `$\Gamma$`   |   $\delta$   |   `$\delta$`   |  $\Delta$   |  `$\Delta$`   |
+| $\epsilon$  | `$\epsilon$`  |     $E$     |     `$E$`     |   $\zeta$    |     `$Z$`      |     $Z$     |     `$Z$`     |
+|   $\eta$    |   `$\eta$`    |     $H$     |     `$H$`     |   $\theta$   |   `$\theta$`   |  $\Theta$   |  `$\Theta$`   |
+|   $\iota$   |   `$\iota$`   |     $I$     |     `$I$`     |   $\kappa$   |   `$\kappa$`   |     $K$     |     `$K$`     |
+|  $\lambda$  |  `$\lambda$`  |  $\Lambda$  |  `$\Lambda$`  |    $\nu$     |    `$\nu$`     |     $N$     |     `$N$`     |
+|    $\mu$    |    `$\mu$`    |     $M$     |     `$M$`     |    $\xi$     |    `$\xi$`     |    $\Xi$    |    `$\Xi$`    |
+|     $o$     |     `$o$`     |     $O$     |     `$O$`     |    $\pi$     |    `$\pi$`     |    $\Pi$    |    `$\Pi$`    |
+|   $\rho$    |   `$\rho$`    |     $P$     |     `$P$`     |   $\sigma$   |   `$\sigma$`   |  $\Sigma$   |  `$\Sigma$`   |
+|   $\tau$    |   `$\tau$`    |     $T$     |     `$T$`     |  $\upsilon$  |  `$\upsilon$`  | $\Upsilon$  | `$\Upsilon$`  |
+|   $\phi$    |   `$\phi$`    |   $\phi$    |   `$\phi$`    |    $\chi$    |    `$\chi$`    |   $\chi$    |   `$\chi$`    |
+|   $\psi$    |   `$\psi$`    |   $\Psi$    |   `$\Psi$`    |   $\omega$   |   `$\omega$`   |  $\Omega$   |  `$\Omega$`   |
+| $\varsigma$ | `$\varsigma$` |  $\varphi$  |  `$\varphi$`  |   $\beth$    |   `$\beth$`    |  $\daleth$  |  `$\daleth$`  |
+|  $\gimel$   |  `$\gimel$`   |  $\aleph$   |  `$\aleph$`   |    $\mid$    |    `$\mid$`    | $\parallel$ | `$\parallel$` |
+| $\bigodot$  | `$\bigodot$`  | $\bigoplus$ | `$\bigoplus$` | $\bigotimes$ | `$\bigotimes$` |    $\%$     |    `$\%$`     |
 
 
 
@@ -478,6 +478,7 @@ section 具体内容
 |      $\ln{a+b}$  和 $\lg{a+b}$ 和 $\log_{a}^{b}$       |       `$\ln{a+b}$` 和 `$\lg{a+b}$` 和 `$\log_{a}^{b}$`       |          |
 |           $\leq$ 和 $\geq$ 和 $\ll$ 和 $\gg$           |          `$\leq$` 和 `$\geq$` 和 `$\ll$` 和 `$\gg$`          |          |
 |                         $\pm$                          |                           `$\pm$`                            |          |
+|                     $\imath\jmath$                     |                       `$\imath\jmath$`                       |          |
 |   $=$ 和 $\approx$ 和 $\cong$ 和 $\equiv$ 和 $\neq$    |  `$=$` 和 `$\approx$` 和 `$\cong$` 和 `$\equiv$`和 `$\neq$`  |          |
 |                 $\propto$ 和 $\infty$                  |                  `$\propto$` 和 `$\infty$`                   |          |
 | $\emptyset$ 和 $\varnothing$ 和 $\subset$ 和 $\supset$ | `$\emptyset$` 和 `$\varnothing$`和 `$\subset$` 和 `$\supset$` |          |
