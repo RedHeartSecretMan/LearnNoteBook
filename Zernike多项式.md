@@ -36,7 +36,8 @@ $$
 $$
 R_n^m(\rho)=\sum_{k=0}^{\tfrac{n-m}{2}}{\frac{(-1)^k(n-k)!}{k!(\frac{n+m}{2}-k)!(\frac{n-m}{2}-k)!}}\rho^{n-2k}\\
 \pmb{or}\\
-R_n^m(\rho)=\sum_{k=0}^{\tfrac{n-m}{2}}(-1)^k \binom{n-k}{k} \binom{n-2k}{\tfrac{n-m}{2}-k} \rho^{n-2k}\\\\
+R_n^m(\rho)=\sum_{k=0}^{\tfrac{n-m}{2}}(-1)^k \binom{n-k}{k} \binom{n-2k}{\tfrac{n-m}{2}-k} \rho^{n-2k}\\
+\pmb{其中}\\
 k={\frac {n(n+1)}{2}}+|m|+\left\{{\begin{array}{ll}0,&m>0\land n\equiv \{0,1\}{\pmod {4}}\\0,&m<0\land n\equiv \{2,3\}{\pmod {4}}\\1,&m\geq 0\land n\equiv \{2,3\}{\pmod {4}}\\1,&m\leq 0\land n\equiv \{0,1\}{\pmod {4}}\end{array}}\right.\\\\
 $$
 
