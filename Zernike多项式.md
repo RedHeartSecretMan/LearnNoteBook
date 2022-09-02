@@ -41,6 +41,10 @@ R_n^m(\rho)=\sum_{k=0}^{\tfrac{n-m}{2}}(-1)^k \binom{n-k}{k} \binom{n-2k}{\tfrac
 k={\frac {n(n+1)}{2}}+|m|+\left\{{\begin{array}{ll}0,&m>0\land n\equiv \{0,1\}{\pmod {4}}\\0,&m<0\land n\equiv \{2,3\}{\pmod {4}}\\1,&m\geq 0\land n\equiv \{2,3\}{\pmod {4}}\\1,&m\leq 0\land n\equiv \{0,1\}{\pmod {4}}\end{array}}\right.\\\\
 $$
 
+$$
+\int_{0}^{2\pi }\int_{0}^{1}Z_n^m(\rho,\theta)^{2}\cdot \rho \,d\rho \,d\theta =\pi\\
+$$
+
 
 
 - **弧度表达式**
