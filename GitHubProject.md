@@ -8,7 +8,7 @@
 
 ### **一、背景**
 
-**[扩散模型](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)在数据合成领域非常有效，在计算机视觉中扩散模型成果斐然，在图像生成中甚至可以击败 GAN，在其他方向也展现出了巨大潜力，例如[视频生成](https://video-diffusion.github.io/)、[音频合成](https://diffwave-demo.github.io/)和[强化学习](https://diffusion-planning.github.io/)等**
+**[扩散模型](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)在计算机视觉领域成果斐然，能够高效的合成数据，图像生成中甚至击败了 GAN，并且在其他领域也展现出潜力，例如[视频生成](https://video-diffusion.github.io/)、[音频合成](https://diffwave-demo.github.io/)和[强化学习](https://diffusion-planning.github.io/)等**
 
 #### **1.1 项目速览**
 
