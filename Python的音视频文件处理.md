@@ -12,7 +12,7 @@
 
 **`ffmpeg-python` 是 `ffmpeg` 的一个包装，通过 `python` 调用`ffmpeg` 的 *API*，实现高效的音视频文件处理**
 
-<img src="./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/formula.png" alt="ffmpeg-python logo" width="60%" />
+<img src="././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/formula.png" alt="ffmpeg-python logo" width="60%" />
 
 
 
@@ -49,7 +49,7 @@ pip install -e ./ffmpeg-python
 
 **$输入文件 \stackrel{解封装}{\Longrightarrow} 已编码的数据包 \stackrel{解码}{\Longrightarrow} 被编码的帧(可进行信号处理操作) \stackrel{编码}{\Longrightarrow} 已编码的数据包 \stackrel{封装}{\Longrightarrow} 输出文件$**
 
-<img src="./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214175210636.png" alt="image-20230214175210636" style="zoom:50%;" />
+<img src="././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214175210636.png" alt="image-20230214175210636" style="zoom:50%;" />
 
 **在 `ffmpeg-python` 中通过 `ffmpeg.input` 对音视频文件解封装，通过 `ffmpeg.filter` 对被解码的帧进行信号处理操作，通过 `ffmpeg.output` 将数据包封装成音视频文件，整个过程会构建成一个结点图，最后通过调用 `ffmpeg.run` 执行节点图上的操作**
 
@@ -241,7 +241,7 @@ ffmpeg.run(streams, overwrite_output=True)
 
 - **打印输出**
 
-  ![image-20230214225318620](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214225318620.png)
+  ![image-20230214225318620](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214225318620.png)
 
 
 
@@ -251,7 +251,7 @@ ffmpeg.run(streams, overwrite_output=True)
 
 #### 简单的例子，水平翻转视频
 
-![image-20230214220940832](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214220940832.png)
+![image-20230214220940832](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214220940832.png)
 
 ```python
 import ffmpeg
@@ -278,11 +278,11 @@ ffmpeg.run(stream)
 
 **`ffmpeg` 非常强大，但使用多个过滤器（filter）处理的信号时，命令代码显得非常粗糙。例如，将输入视频两次修剪后合并，再将水平翻转的图片覆盖在视频上，接着在上面画一个框输出视频**
 
-![Signal graph](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/graph1.png)
+![Signal graph](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/graph1.png)
 
 > ***图中绿色代表输入文件，黄色代表过滤器，蓝色代表输出文件，箭头代表数据流***
 
-<img src="./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/screenshot.png" alt="Screenshot" align="middle" width="60%" />
+<img src="././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/screenshot.png" alt="Screenshot" align="middle" width="60%" />
 
  **`ffmpeg` 的命令很难记忆与理解琐碎**
 
@@ -319,7 +319,7 @@ overlay_file = ffmpeg.input('overlay.png')
 
 #### 生成视频缩略图
 
-![get_video_thumbnail](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/get_video_thumbnail.png)
+![get_video_thumbnail](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/get_video_thumbnail.png)
 
 ```
 (
@@ -335,7 +335,7 @@ overlay_file = ffmpeg.input('overlay.png')
 
 #### 将视频转换为numpy数组
 
-![get-video-thumbnail graph](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/ffmpeg-numpy.png)
+![get-video-thumbnail graph](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/ffmpeg-numpy.png)
 
 ```
 out, _ = (
@@ -355,7 +355,7 @@ video = (
 
 #### 通过管道读取单个视频帧为jpeg
 
-![read_frame_as_jpeg](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/read_frame_as_jpeg.png)
+![read_frame_as_jpeg](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/read_frame_as_jpeg.png)
 
 ```
 out, _ = (
@@ -371,7 +371,7 @@ out, _ = (
 
 #### 将声音转换为原始PCM音频
 
-![transcribe](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/transcribe.png)
+![transcribe](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/transcribe.png)
 
 ```
 out, _ = (ffmpeg
@@ -386,7 +386,7 @@ out, _ = (ffmpeg
 
 #### 从帧序列组装视频
 
-![glob](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/glob.png)
+![glob](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/glob.png)
 
 ```
 (
@@ -399,7 +399,7 @@ out, _ = (ffmpeg
 
 **添加额外过滤器**
 
-![glob-filter](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/glob-filter.png)
+![glob-filter](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/glob-filter.png)
 
 ```
 (
@@ -417,7 +417,7 @@ out, _ = (ffmpeg
 
 #### 音视频管线
 
-![av-pipeline graph](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/av-pipeline.png)
+![av-pipeline graph](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/av-pipeline.png)
 
 ```
 in1 = ffmpeg.input('in1.mp4')
@@ -437,7 +437,7 @@ out.run()
 
 #### 单声道到立体声带偏移和视频
 
-![mono-to-stereo](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/mono-to-stereo.png)
+![mono-to-stereo](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/mono-to-stereo.png)
 
 ```
 audio_left = (
@@ -469,13 +469,13 @@ input_video = ffmpeg.input('input-video.mp4')
 
 ####  Jupyter Frame Viewer
 
-![jupyter-screenshot](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/jupyter-screenshot.png)
+![jupyter-screenshot](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/jupyter-screenshot.png)
 
 
 
 #### Tensorflow Streaming
 
-![tensorflow-stream](./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/tensorflow-stream.png)
+![tensorflow-stream](././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/tensorflow-stream.png)
 
 - **`ffmpeg` 解码输入视频**
 - **`tensorflow` 使用 "deep dream" 处理视频**
@@ -521,7 +521,7 @@ process1.wait()
 process2.wait()
 ```
 
-<img src="./Markdown%E5%9B%BE%E5%BA%8A/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214234754387.png" alt="image-20230214234754387" style="zoom:50%;" />
+<img src="././assets/Python%E7%9A%84%E9%9F%B3%E8%A7%86%E9%A2%91%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/image-20230214234754387.png" alt="image-20230214234754387" style="zoom:50%;" />
 
 
 

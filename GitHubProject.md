@@ -16,22 +16,22 @@
 
 - **[扩散模式](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb)**
 
-  > <img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/diffusion-process-1683587.png" alt="img" width=800px; />
+  > <img src="./assets/GithubProject/diffusion-process-1683587.png" alt="img" width=800px; />
 
 - **[文字到图像](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/stable_diffusion.ipynb#scrollTo=BBsdAj9pDPOv)**
 
-  > <img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/image-20220828183921700.png" alt="image-20220828183921700" width=800px; />
+  > <img src="./assets/GithubProject/image-20220828183921700.png" alt="image-20220828183921700" width=800px; />
 
 - **[文字加图像到图像](https://colab.research.google.com/github/patil-suraj/Notebooks/blob/master/image_2_image_using_diffusers.ipynb#scrollTo=V24njWQBC8eC)**
 
-  > <img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/image-20220829011438017.png" alt="image-20220829011438017" width=800px; />
+  > <img src="./assets/GithubProject/image-20220829011438017.png" alt="image-20220829011438017" width=800px; />
 
 - **Data Pipeline**
 
   > <table>
   >  <tr>
-  >      <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/stable_diffusion-1683335.png" height=400px ></center></td>
-  >            <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/:Users:WangHao:Desktop:Markdown%E5%9B%BE%E5%BA%8A:GithubProject:174348898-481bd7c2-5457-4830-89bc-f0907756f64c.jpeg" height=400px ></center></td>
+  >      <td><center><img src="./assets/GithubProject/stable_diffusion-1683335.png" height=400px ></center></td>
+  >            <td><center><img src="./assets/GithubProject/:Users:WangHao:Desktop:Markdown%E5%9B%BE%E5%BA%8A:GithubProject:174348898-481bd7c2-5457-4830-89bc-f0907756f64c.jpeg" height=400px ></center></td>
   >    <td><center><font face="楷体" color=黑 size=3> ... </font></center></td>
   >  </tr>
   > 	<tr>
@@ -50,7 +50,7 @@
 
 #### **1.2 模型结构**
 
-<img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/image-20220828232900892.png" alt="image-20220828232900892" width=800px;>
+<img src="./assets/GithubProject/image-20220828232900892.png" alt="image-20220828232900892" width=800px;>
 
 - *`文本编码器 CLIP`，将文本转换为 U-Net 可以理解的隐空间*
 
@@ -58,7 +58,7 @@
 
 - *`运算核心 UNet`，由 ResNet 块组成，生成输入潜在表示，预测去噪图像的噪声残差*
 
-  > <img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/unet-model.png" alt="img" width=800px;>
+  > <img src="./assets/GithubProject/unet-model.png" alt="img" width=800px;>
 
 - *`变分自编码器 VAE`，将潜在表示解码为真实图像，训练期间编码器用于获取图像的潜在表示，推理过程使用解码器转换回图像*
 
@@ -320,9 +320,9 @@ class StableDiffusionImgToImgPipeline(DiffusionPipeline):
 
 <table>
     <tr>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0000.png" width=250px height=250px ></center></td>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0001-1708222.png" width=250px height=250px ></center></td>
-      	<td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0006.png" width=250px height=250px ></center></td>
+        <td><center><img src="./assets/GithubProject/0000.png" width=250px height=250px ></center></td>
+        <td><center><img src="./assets/GithubProject/0001-1708222.png" width=250px height=250px ></center></td>
+      	<td><center><img src="./assets/GithubProject/0006.png" width=250px height=250px ></center></td>
     </tr>
   	<tr>
      	<td><center><font face="楷体" color=黑 size=3> Donald Trump wears a panda headgear </font></center></td>
@@ -330,9 +330,9 @@ class StableDiffusionImgToImgPipeline(DiffusionPipeline):
       <td><center><font face="楷体" color=黑 size=3> Teddy bears, on the moon in the 1980s </font></center></td>
  		</tr>
     <tr>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0007.png" width=250px height=250px ></center></td>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0004-1708547.png" width=250px height=250px ></center></td>
-      	<td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0001.png" width=250px height=250px ></center></td>
+        <td><center><img src="./assets/GithubProject/0007.png" width=250px height=250px ></center></td>
+        <td><center><img src="./assets/GithubProject/0004-1708547.png" width=250px height=250px ></center></td>
+      	<td><center><img src="./assets/GithubProject/0001.png" width=250px height=250px ></center></td>
     </tr>
   	<tr>
      	<td><center><font face="楷体" color=黑 size=3> A fox sitting in a field at sunrise, Claude Monet </font></center></td>
@@ -340,9 +340,9 @@ class StableDiffusionImgToImgPipeline(DiffusionPipeline):
       <td><center><font face="楷体" color=黑 size=3> Dreams flowers and maidens </font></center></td>
  		</tr>
   	<tr>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0006-1708677.png" width=250px height=250px ></center></td>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0002.png" width=250px height=250px ></center></td>
-      	<td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0004-1709072.png" width=250px height=250px ></center></td>
+        <td><center><img src="./assets/GithubProject/0006-1708677.png" width=250px height=250px ></center></td>
+        <td><center><img src="./assets/GithubProject/0002.png" width=250px height=250px ></center></td>
+      	<td><center><img src="./assets/GithubProject/0004-1709072.png" width=250px height=250px ></center></td>
     </tr>
   	<tr>
      	<td><center><font face="楷体" color=黑 size=3> A man looking upwards, eyes wide inwonder</font></center></td>
@@ -446,9 +446,9 @@ show_image(image_list, prompt)
 
 <table>
     <tr>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/%E8%80%81%E9%B9%B0.jpeg" width=300px height=200px ></center></td>
-        <td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0002-1709609.png" width=300px height=200px ></center></td>
-      	<td><center><img src="Markdown%E5%9B%BE%E5%BA%8A/GithubProject/0003.png" width=300px height=200px ></center></td>
+        <td><center><img src="./assets/GithubProject/%E8%80%81%E9%B9%B0.jpeg" width=300px height=200px ></center></td>
+        <td><center><img src="./assets/GithubProject/0002-1709609.png" width=300px height=200px ></center></td>
+      	<td><center><img src="./assets/GithubProject/0003.png" width=300px height=200px ></center></td>
     </tr>
   	<tr>
      	<td><center><font face="楷体" color=黑 size=3> 原图 </font></center></td>
